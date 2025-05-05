@@ -1,0 +1,18 @@
+<div class="home-container">
+    <h1>Bienvenido al Home</h1>
+  
+    <div class="menu">
+      <h3>Menú de opciones</h3>
+      <ul>
+        <!-- Iterar sobre las opciones disponibles en el menú -->
+        <li *ngFor="let option of availableOptions">
+          <button (click)="navigateTo(option.route)">{{ option.name }}</button>
+        </li>
+      </ul>
+    </div>
+  
+    <div *ngIf="availableOptions.length === 0">
+      <p>No tienes privilegios para acceder a ninguna opción.</p>
+    </div>
+  </div>
+  

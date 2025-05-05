@@ -1,0 +1,40 @@
+<div class="modal">
+    <div class="modal-content">
+      <h3>Editar Máquina Virtual</h3>
+      <form (ngSubmit)="onUpdate()" class="form-grid">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input id="name" [(ngModel)]="virtualMachine.name" name="name" required />
+        </div>
+  
+        <div class="form-group">
+          <label for="cores">CPU (Cores):</label>
+          <input id="cores" [(ngModel)]="virtualMachine.cores" name="cores" required type="number" />
+        </div>
+  
+        <div class="form-group">
+          <label for="ramGb">RAM (GB):</label>
+          <input id="ramGb" [(ngModel)]="virtualMachine.ramGb" name="ramGb" required type="number" />
+        </div>
+  
+        <div class="form-group">
+          <label for="diskGb">Disco (GB):</label>
+          <input id="diskGb" [(ngModel)]="virtualMachine.diskGb" name="diskGb" required type="number" />
+        </div>
+  
+        <div class="form-group">
+          <label for="operatingSystem">Sistema Operativo:</label>
+          <input id="operatingSystem" [(ngModel)]="virtualMachine.operatingSystem" name="operatingSystem" required />
+        </div>
+  
+        <!-- Campo oculto para ID (opcional) -->
+        <input type="hidden" [(ngModel)]="virtualMachine.id" name="id" />
+  
+        <div class="form-buttons">
+          <button type="submit">Actualizar</button>
+          <button type="button" (click)="closeModal()">Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

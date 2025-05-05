@@ -1,0 +1,39 @@
+.home-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .menu {
+    margin-top: 30px;
+  }
+  
+  .menu h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  .menu button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .menu button:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .menu p {
+    color: #ff0000;
+    font-weight: bold;
+  }
+  

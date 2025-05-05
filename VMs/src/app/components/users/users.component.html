@@ -1,0 +1,30 @@
+<div class="table-container">
+
+  <button class="btn-salir" (click)="goHome()">Salir</button>
+
+  <table class="users-table">
+    <thead>
+      <tr>
+        <th>Nombre completo</th>
+        <th>Nick</th>
+        <th>Email</th>
+        <th>Activo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of pagedList.list">
+        <td>{{ user.fullName }}</td>
+        <td>{{ user.nickName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.isActive ? 'Sí' : 'No' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Paginador básico -->
+  <div class="paginator">
+    <button (click)="changePage(pagedList.pageNumber - 1)" [disabled]="pagedList.pageNumber === 1">Anterior</button>
+    <span>Página {{ pagedList.pageNumber }} de {{ pagedList.totalPages }}</span>
+    <button (click)="changePage(pagedList.pageNumber + 1)" [disabled]="pagedList.pageNumber === pagedList.totalPages">Siguiente</button>
+  </div>
+</div>
